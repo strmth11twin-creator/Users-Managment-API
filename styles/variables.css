@@ -1,0 +1,29 @@
+:root {
+    --bg-main: #f6f8fc;
+    --bg-card: #ffffff;
+    --border: #e6e9f0;
+    --bg-sidebar: #1e293b;
+
+    --text-main: #1f2937;
+    --text-secondary: #6b7280;
+
+    --primary: #6c39e0;
+    --primary-hover: #4c5df5;
+
+    --success-bg: #dcfce7;
+    --success-text: #16a34a;
+
+    --danger-bg: #fee2e2;
+    --danger-text: #dc2626;
+
+    --admin-bg: #ede9fe;
+    --admin-text: #7c3aed;
+
+    --user-bg: #f1f5f9;
+    --user-text: #475569;
+
+    --moderator-bg: #fef3c7;
+    --moderator-text: #d97706;
+
+    --white: #fff;
+}

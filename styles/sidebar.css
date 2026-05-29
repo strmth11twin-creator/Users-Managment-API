@@ -1,0 +1,98 @@
+.sidebar {
+    width: 100%;
+    max-width: 330px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    padding: 0 10px;
+}
+
+.sidebar_header {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 20px 0 0 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar_button {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+.managment-icon {
+    width: 25px;
+    height: 25px;
+    fill: var(--white);
+}
+
+.sidebar_title {
+    color: var(--white);
+}
+
+.sidebar_navigation {
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+.sidebar_navigation--container {
+    display: flex;
+    padding: 12px;
+    border-radius: 10px;
+    gap: 10px;
+    width: 100%;
+}
+
+.active {
+    background-color: var(--primary);
+}
+
+.users-icon {
+    fill: var(--white);
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar_footer {
+    display: flex;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 10px;
+    background-color: rgba(24, 26, 33, 0.96);
+}
+
+.sidebar_navigation--item {
+    font-size: 18px;
+    color: var(--white);
+}
+
+.sidebar-text {
+    color: var(--white);
+}
+
+.sun-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    fill: var(--white);
+}
+
+@media(max-width: 1024px) {
+    .sidebar {
+        max-width: 250px;
+
+    }
+
+    .sidebar_title {
+        color: var(--white);
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
