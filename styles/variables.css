@@ -1,11 +1,22 @@
 :root {
     --bg-main: #f6f8fc;
     --bg-card: #ffffff;
-    --border: #e6e9f0;
+    --border: #cdd1da;
     --bg-sidebar: #1e293b;
+
+    --inactive-users-bg: #fee2e2;
+    --inactive-users-icon: #dc2626;
 
     --text-main: #1f2937;
     --text-secondary: #6b7280;
+
+    --active-users-bg: #dcfce7;
+    --active-users-icon: #16a34a;
+
+    --admin-users-bg: #fef3c7;
+    --admin-users-icon: #d97706;
+
+    --total-users-bg: #f0e3f8;
 
     --primary: #6c39e0;
     --primary-hover: #4c5df5;

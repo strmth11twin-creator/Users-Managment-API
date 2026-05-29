@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" data-container>
         <aside class="sidebar">
             <div class="sidebar_header">
                 <button class="sidebar_button">
@@ -70,7 +70,7 @@
                     </svg>
                     <input type="text" class="search-input" placeholder="Search Users...">
                 </div>
-                <button class="add-btn">
+                <button class="add-btn" data-add-btn>
                     <svg class="plus-icon">
                         <use href="svg-icons/plus_icon-icons.com_72294.svg"></use>
                     </svg>
@@ -78,7 +78,105 @@
                     Add User
                 </button>
             </div>
+
+            <main class="hero">
+                <div class="hero_container">
+                    <button class="hero_container-btn">
+                        <svg class="hero_container-icon">
+                            <use href="svg-icons/users_icon-icons.com_57999.svg"></use>
+                        </svg>
+                    </button>
+
+                    <div class="hero_container--wrapper">
+                        <span class="all-count">0</span>
+                        <p class="wrapper_text">Total Users</p>
+                    </div>
+                </div>
+
+                <div class="hero_container">
+                    <button class="hero_container-btn  active-user">
+                        <svg class="hero_container-icon active-icon">
+                            <use href="svg-icons/activity_user_icon_217138.svg"></use>
+                        </svg>
+                    </button>
+
+                    <div class="hero_container--wrapper">
+                        <span class="all-count">0</span>
+                        <p class="wrapper_text">Active Users</p>
+                    </div>
+                </div>
+
+                <div class="hero_container">
+                    <button class="hero_container-btn admin">
+                        <svg class="hero_container-icon admin-icon">
+                            <use href="svg-icons/seo-social-web-network-internet_07_icon-icons.com_61538.svg"></use>
+                        </svg>
+                    </button>
+
+                    <div class="hero_container--wrapper">
+                        <span class="all-count">0</span>
+                        <p class="wrapper_text">All Admins</p>
+                    </div>
+                </div>
+
+                <div class="hero_container">
+                    <button class="hero_container-btn  inactive-user">
+                        <svg class="hero_container-icon inactive-icon">
+                            <use href="svg-icons/profile_picture_user_icon_153847.svg"></use>
+                        </svg>
+                    </button>
+
+                    <div class="hero_container--wrapper">
+                        <span class="all-count">0</span>
+                        <p class="wrapper_text">Inactive Users</p>
+                    </div>
+                </div>
+            </main>
         </div>
+    </div>
+
+    <div class="modal" data-modal>
+        <form data-form class="form">
+            <div class="modal_container">
+                <h3 class="modal_container--title">Add User</h3>
+                <button class="modal_container--remove-btn" data-modal-remove-btn>X</button>
+            </div>
+
+            <div class="modal_container--control">
+                <label for="name-id" class="control_label">Name</label>
+                <input type="text" class="control_input" id="name-id" name="userName" placeholder="Enter Name" required>
+            </div>
+
+            <div class="modal_container--control">
+                <label for="email-id" class="control_label">Email</label>
+                <input type="email" class="control_input" id="email-id" name="userEmail" placeholder="Enter Email"
+                    required>
+            </div>
+
+            <div class="modal_container--control">
+                <label for="role-id" class="control_label">Role</label>
+                <select name="userRole" id="role-id" class="control_input" required>
+                    <option value="" class="option" disabled selected>Select role</option>
+                    <option value="User" class="option">User</option>
+                    <option value="Admin" class="option">Admin</option>
+                    <option value="Moderator" class="option">Moderator</option>
+                </select>
+            </div>
+
+            <div class="modal_container--control">
+                <label for="status-id" class="control_label">Status</label>
+                <select name="userStatus" id="status-id" class="control_input" required>
+                    <option value="" class="option" disabled selected>Select status</option>
+                    <option value="Active" class="option">Active</option>
+                    <option value="Inactive" class="option">Inactive</option>
+                </select>
+            </div>
+
+            <div class="modal_container--buttons">
+                <button class="cancel-btn" data-modal-cancel-btn>Cancel</button>
+                <button class="create-btn">Create User</button>
+            </div>
+        </form>
     </div>
 </body>
 

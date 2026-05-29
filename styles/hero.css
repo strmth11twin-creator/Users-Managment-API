@@ -1,0 +1,74 @@
+.hero {
+    padding: 0 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.hero_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 15px;
+    padding: 20px 10px 20px 10px;
+    background-color: var(--white);
+    max-width: 230px;
+    width: 100%;
+    box-shadow: 2px 2px 10px #c0bfbf;
+}
+
+.hero_container-btn {
+    border: none;
+    background-color: var(--total-users-bg);
+    border-radius: 50%;
+    padding: 10px 15px 10px 15px;
+}
+
+.hero_container-icon {
+    fill: var(--primary);
+    width: 50px;
+    height: 50px;
+}
+
+.hero_container--wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.all-count {
+    font-weight: 700;
+}
+
+.wrapper_text {
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.active-user {
+    background-color: var(--active-users-bg);
+}
+
+.active-icon {
+    fill: var(--active-users-icon);
+}
+
+.admin {
+    background-color: var(--admin-users-bg);
+}
+
+.admin-icon {
+    fill: var(--admin-users-icon);
+}
+
+.inactive-user {
+    background-color: var(--inactive-users-bg);
+}
+
+.inactive-icon {
+    fill: var(--inactive-users-icon);
+}

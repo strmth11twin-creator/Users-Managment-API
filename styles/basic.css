@@ -4,8 +4,8 @@
 
 body {
     font-family: "Inter", system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-main);
     margin: 0;
+    background-color: var(--bg-main);
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -13,9 +13,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.container-blur {
+    filter: blur(10px);
 }
 
 .container_wrapper {
@@ -34,6 +39,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .wrapper_desc {
     font-size: 18px;
+    font-weight: 700;
+    color: var(--text-secondary);
 }
 
 .container_wrapper--content {}

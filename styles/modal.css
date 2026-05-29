@@ -1,0 +1,84 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    max-width: 400px;
+    width: 100%;
+    display: none;
+}
+
+.modal-visible {
+    display: block;
+}
+
+.modal_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+.modal_container--title {
+    color: var(--text-main);
+}
+
+.modal_container--remove-btn {
+    cursor: pointer;
+    border: none;
+    background-color: unset;
+    color: var(--text-secondary);
+}
+
+.modal_container--control {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 5px 0 0 0;
+}
+
+.control_label {
+    font-size: 14px;
+}
+
+.control_input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.option {}
+
+.modal_container--buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 10px 0 0 0;
+    gap: 10px;
+}
+
+.cancel-btn {
+    background-color: unset;
+    border: 1px solid var(--border);
+    height: 30px;
+    border-radius: 5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.create-btn {
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    border: none;
+    color: var(--white);
+    padding: 0 10px;
+}
