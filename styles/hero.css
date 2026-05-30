@@ -3,8 +3,9 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .hero_container {
@@ -15,7 +16,7 @@
     gap: 15px;
     padding: 20px 10px 20px 10px;
     background-color: var(--white);
-    max-width: 230px;
+    max-width: 250px;
     width: 100%;
     box-shadow: 2px 2px 10px #c0bfbf;
 }
@@ -36,6 +37,7 @@
 .hero_container--wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 5px;
 }

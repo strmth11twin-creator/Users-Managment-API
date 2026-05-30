@@ -2,14 +2,14 @@
     display: flex;
     padding: 0 10px;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     width: 100%;
     gap: 10px;
 }
 
 .container_wrapper--title {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     gap: 50px;
     align-items: center;
     padding: 0 10px;
@@ -87,5 +87,21 @@
     .search-input {
         max-width: 150px;
         width: 100%;
+    }
+}
+
+@media(max-width: 425px) {
+    .add-btn {
+        max-width: 130px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .container_wrapper--title {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+        align-items: center;
+        padding: 0 5px;
     }
 }

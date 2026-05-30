@@ -4,6 +4,14 @@
     height: 100vh;
     background-color: var(--bg-sidebar);
     padding: 0 10px;
+    position: fixed;
+    transform: translateX(-310px);
+    border-right: 20px solid var(--bg-sidebar);
+    transition: .3s transform ease-in-out;
+}
+
+.sidebar:hover {
+    transform: translateX(0);
 }
 
 .sidebar_header {
@@ -43,6 +51,8 @@
     border-radius: 10px;
     gap: 10px;
     width: 100%;
+    cursor: pointer;
+    user-select: none;
 }
 
 .active {
