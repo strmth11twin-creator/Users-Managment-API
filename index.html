@@ -10,44 +10,56 @@
 </head>
 
 <body>
+
+
     <div class="container" data-container>
-        <aside class="sidebar">
-            <div class="sidebar_header">
-                <button class="sidebar_button">
-                    <svg class="managment-icon">
-                        <use href="svg-icons/group-profile-users_icon-icons.com_73540.svg"></use>
-                    </svg>
-                </button>
 
-                <h2 class="sidebar_title">Users-Managment</h2>
+        <aside class="sidebar" data-sidebar>
+            <div class="wrapper">
+                    <button class="cross-btn" data-cross-btn>
+                        <svg class="cross-icon">
+                            <use href="svg-icons/x_cross_delete_remove_icon_144023.svg"></use>
+                        </svg>
+                    </button>
+
+                <div class="sidebar_header">
+                    <button class="sidebar_button">
+                        <svg class="managment-icon">
+                            <use href="svg-icons/group-profile-users_icon-icons.com_73540.svg"></use>
+                        </svg>
+                    </button>
+
+                    <h2 class="sidebar_title">Users-Managment</h2>
+                </div>
+
+                <nav class="sidebar_navigation" data-sidebar-navigation>
+                    <div class="sidebar_navigation--container active" data-filter="all">
+                        <svg class="users-icon">
+                            <use href="svg-icons/user_icon_150670.svg"></use>
+                        </svg>
+
+                        <p class="sidebar_navigation--item">Users</p>
+                    </div>
+
+                    <div class="sidebar_navigation--container" data-filter="admins">
+                        <svg class="users-icon">
+                            <use href="svg-icons/administrator_solid_icon_236304.svg"></use>
+                        </svg>
+
+                        <p class="sidebar_navigation--item">Administrators</p>
+                    </div>
+
+                    <div class="sidebar_navigation--container" data-filter="moderators">
+                        <svg class="users-icon">
+                            <use href="svg-icons/Moderator_icon-icons.com_55860.svg"></use>
+                        </svg>
+
+                        <p class="sidebar_navigation--item">Moderators</p>
+                    </div>
+                </nav>
             </div>
-
-            <nav class="sidebar_navigation" data-sidebar-navigation>
-                <div class="sidebar_navigation--container active" data-filter="all">
-                    <svg class="users-icon">
-                        <use href="svg-icons/user_icon_150670.svg"></use>
-                    </svg>
-
-                    <p class="sidebar_navigation--item">Users</p>
-                </div>
-
-                <div class="sidebar_navigation--container" data-filter="admins">
-                    <svg class="users-icon">
-                        <use href="svg-icons/administrator_solid_icon_236304.svg"></use>
-                    </svg>
-
-                    <p class="sidebar_navigation--item">Administrators</p>
-                </div>
-
-                <div class="sidebar_navigation--container" data-filter="moderators">
-                    <svg class="users-icon">
-                        <use href="svg-icons/Moderator_icon-icons.com_55860.svg"></use>
-                    </svg>
-
-                    <p class="sidebar_navigation--item">Moderators</p>
-                </div>
-            </nav>
         </aside>
+
 
         <div class="container_wrapper">
             <div class="container_wrapper--title">
@@ -139,84 +151,83 @@
 
     <dialog class="user-dialog" data-user-dialog></dialog>
 
-        <div class="modal"  data-modal>
-            <form data-form class="form">
-                <div class="modal_container">
-                    <h3 class="modal_container--title">Add User</h3>
-                    <button class="modal_container--remove-btn" data-modal-remove-btn type="button">X</button>
-                </div>
+    <div class="modal" data-modal>
+        <form data-form class="form">
+            <div class="modal_container">
+                <h3 class="modal_container--title">Add User</h3>
+                <button class="modal_container--remove-btn" data-modal-remove-btn type="button">X</button>
+            </div>
 
-                <div class="modal_container--control">
-                    <label for="name-id" class="control_label">Name</label>
-                    <input type="text" class="control_input" id="name-id" name="userName" placeholder="Enter Name"
-                        required>
-                </div>
+            <div class="modal_container--control">
+                <label for="name-id" class="control_label">Name</label>
+                <input type="text" class="control_input" id="name-id" name="userName" placeholder="Enter Name" required>
+            </div>
 
-                <div class="modal_container--control">
-                    <label for="email-id" class="control_label">Email</label>
-                    <input type="email" class="control_input" id="email-id" name="userEmail" placeholder="Enter Email"
-                        required>
-                </div>
+            <div class="modal_container--control">
+                <label for="email-id" class="control_label">Email</label>
+                <input type="email" class="control_input" id="email-id" name="userEmail" placeholder="Enter Email"
+                    required>
+            </div>
 
-                <div class="modal_container--control">
-                    <label for="role-id" class="control_label">Role</label>
-                    <select name="userRole" id="role-id" class="control_input" required>
-                        <option value="" class="option" disabled selected>Select role</option>
-                        <option value="User" class="option">User</option>
-                        <option value="Admin" class="option">Admin</option>
-                        <option value="Moderator" class="option">Moderator</option>
-                    </select>
-                </div>
+            <div class="modal_container--control">
+                <label for="role-id" class="control_label">Role</label>
+                <select name="userRole" id="role-id" class="control_input" required>
+                    <option value="" class="option" disabled selected>Select role</option>
+                    <option value="User" class="option">User</option>
+                    <option value="Admin" class="option">Admin</option>
+                    <option value="Moderator" class="option">Moderator</option>
+                </select>
+            </div>
 
-                <div class="modal_container--control">
-                    <label for="status-id" class="control_label">Status</label>
-                    <select name="userStatus" id="status-id" class="control_input" required>
-                        <option value="" class="option" disabled selected>Select status</option>
-                        <option value="Active" class="option">Active</option>
-                        <option value="Inactive" class="option">Inactive</option>
-                    </select>
-                </div>
+            <div class="modal_container--control">
+                <label for="status-id" class="control_label">Status</label>
+                <select name="userStatus" id="status-id" class="control_input" required>
+                    <option value="" class="option" disabled selected>Select status</option>
+                    <option value="Active" class="option">Active</option>
+                    <option value="Inactive" class="option">Inactive</option>
+                </select>
+            </div>
 
-                <div class="modal_container--control">
-                    <label for="image-id" class="control_label">Image</label>
-                    <select name="userImage" id="image-id" class="control_input" required>
-                        <option value="" class="option" disabled selected>Images Url</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/W1bwvMMaXMGnjcp4TosjDemwlZ51Vif8tkD1pzLKBiC7eSBzRLUprmusSlxXEJWEFwcAep_nZjTx3LIDqf8miK8pX91KbEVptfrPsRU390hc6gX2GOMwJhNu75BmhU_YsLfiSsL4I5RZ0Yu25gWyAx_KW1URJgNC-jubTLgG6FM?purpose=inline"
-                            class="option">Фотография 1</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/lCZul59mLdqemYyXl9Vhub-VqRgBbPO2iSffLfjRImIW60SqWI_ij9sDSS-ENQwhmgNNzT4s5vTB2g5RrY3WDnPk6FwXWNO6sl3kTWFdefnwhunrJT_fWW9U8M8gjufEylrMMTsm_s2QjAzp9LBvU4ihoCDTkep5vE2xedwGmN8?purpose=inline"
-                            class="option">Фотография 2</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/tem5V4fDp37S_ekFOQUAmwjRM6h9KbeN3i2SPU5SZ9GaP37qd27rRq5IFuG5v6F_4HCUL-_R547pbLUV_5uW1bY6cdYURxmKIF6Q3moXwHU0Jh2H4VvqBoySL2CWiK3vQ4GAFDzw4yoccJ-vw_T6MPklxQ8dkXNzuZlzEqzHtjy346xIDdWQfEQSqrSsZVzM?purpose=inline"
-                            class="option">Фотография 3</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/rVbtyMaYB4BXKgkpMrGxmWXhseSXnoxefbBUtq-inLYPFYzTH0FRnm-8fu2qwtyTJrPsJ4vVRoI35hX-UiIaA1TXaMpr7SOTwfP0VMFEsMXTk5DRrjDTiPu_rlrdJhl6NCnFQdX2l40h97WVrqwz2j6wn345C4oyObsaTdI96xae1NapjRasjRi1DYvH83IN?purpose=fullsize"
-                            class="option">Фотография 4</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/0Huhwmt3B42RJuQvL7hgvDA0GMUPLbulHMCZNuGjR7X-_vtHkbqqevCjZUESKLNPPDbXIte7hFE65vM1lhF2wToJErPahGFBDWMlXE9VM_54yFWF4VHpGW4tJvSQkVgW9X2uQogfEqanT1s35ouDJLELZ3s01XR6llevrqgc0eBHNQiV3auPn3fq__7ZLcq4?purpose=fullsize"
-                            class="option">Фотография 5</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/H54n1yv0z3ezJJD0r60l_YkqyMxrfrdI0qtxJOeYKKVpuT4b6XZuIWHHf9KcnNhIsIUEiLN068HqRaswZBuq0kXgbngBxMzN-E0LeRFqFJH-nTrwwJChRRy8Wjn0GXpI24LP4fqnWg1O4DAvhLx8mAlU7orCUulJrt8hb-73_Jjlt1k1C4tvUFu48-EoLGXM?purpose=fullsize"
-                            class="option">Фотография 6</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/lOYg2m8DUZgKmlv-p85UEPgzz1WB5N8kRs27PAIxul6jQUV2dgNzZiKNZyMe-hH6fBQpzmGoh9c_xpOh2Gc1WFry3LUAg0OwYGj3gO8Cq-bV6GPF8C55PzSbJiNPtCKWsDkvg5A30d96OSUl2osMs2AghWGZtvfrVo2kFT4LBzU3diKsAUnPP28iWuNBalJu?purpose=fullsize"
-                            class="option">Фотография 7</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/l7RrHo21ZsoelhYjWxNNBN582QMDG5Cg4QusPJy3gWyAFHF_YntgKCY0Iq92vfhJzDElIVynhLPEMXpY8h16UCz1QpewR8kmjRfrE6LMN_vE-HbTximDsEkdtfeKPQ1Bwozxmxto-mbjv5g7bI7_2D1hQdC423vbZhUmqSuh6WbG6hWegcGcbJHBNXWxi6N6?purpose=inline"
-                            class="option">Фотография 8</option>
-                        <option
-                            value="https://images.openai.com/static-rsc-4/msZDUoT1FgwKUwl8D0HP4wLuJUxPAzb7VkaxEy6-LgmwVHlQz9ey8qYDEpRqil_5AYLRM5GjMzwDVtQg5FQXpmDrX1Zt9d6pU6ImqDvXqSoLeso0yEkIjgUHWTdZ-Xszex7p_ZH7oHwW9rgDd48dgRbjfLzTDbyVIAB4HE9ZSrBXSsCjIoeYxcYBGtRJ6V28?purpose=inline"
-                            class="option">Фотография 9</option>
-                    </select>
-                </div>
+            <div class="modal_container--control">
+                <label for="image-id" class="control_label">Image</label>
+                <select name="userImage" id="image-id" class="control_input" required>
+                    <option value="" class="option" disabled selected>Images Url</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/W1bwvMMaXMGnjcp4TosjDemwlZ51Vif8tkD1pzLKBiC7eSBzRLUprmusSlxXEJWEFwcAep_nZjTx3LIDqf8miK8pX91KbEVptfrPsRU390hc6gX2GOMwJhNu75BmhU_YsLfiSsL4I5RZ0Yu25gWyAx_KW1URJgNC-jubTLgG6FM?purpose=inline"
+                        class="option">Фотография 1</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/lCZul59mLdqemYyXl9Vhub-VqRgBbPO2iSffLfjRImIW60SqWI_ij9sDSS-ENQwhmgNNzT4s5vTB2g5RrY3WDnPk6FwXWNO6sl3kTWFdefnwhunrJT_fWW9U8M8gjufEylrMMTsm_s2QjAzp9LBvU4ihoCDTkep5vE2xedwGmN8?purpose=inline"
+                        class="option">Фотография 2</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/tem5V4fDp37S_ekFOQUAmwjRM6h9KbeN3i2SPU5SZ9GaP37qd27rRq5IFuG5v6F_4HCUL-_R547pbLUV_5uW1bY6cdYURxmKIF6Q3moXwHU0Jh2H4VvqBoySL2CWiK3vQ4GAFDzw4yoccJ-vw_T6MPklxQ8dkXNzuZlzEqzHtjy346xIDdWQfEQSqrSsZVzM?purpose=inline"
+                        class="option">Фотография 3</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/rVbtyMaYB4BXKgkpMrGxmWXhseSXnoxefbBUtq-inLYPFYzTH0FRnm-8fu2qwtyTJrPsJ4vVRoI35hX-UiIaA1TXaMpr7SOTwfP0VMFEsMXTk5DRrjDTiPu_rlrdJhl6NCnFQdX2l40h97WVrqwz2j6wn345C4oyObsaTdI96xae1NapjRasjRi1DYvH83IN?purpose=fullsize"
+                        class="option">Фотография 4</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/0Huhwmt3B42RJuQvL7hgvDA0GMUPLbulHMCZNuGjR7X-_vtHkbqqevCjZUESKLNPPDbXIte7hFE65vM1lhF2wToJErPahGFBDWMlXE9VM_54yFWF4VHpGW4tJvSQkVgW9X2uQogfEqanT1s35ouDJLELZ3s01XR6llevrqgc0eBHNQiV3auPn3fq__7ZLcq4?purpose=fullsize"
+                        class="option">Фотография 5</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/H54n1yv0z3ezJJD0r60l_YkqyMxrfrdI0qtxJOeYKKVpuT4b6XZuIWHHf9KcnNhIsIUEiLN068HqRaswZBuq0kXgbngBxMzN-E0LeRFqFJH-nTrwwJChRRy8Wjn0GXpI24LP4fqnWg1O4DAvhLx8mAlU7orCUulJrt8hb-73_Jjlt1k1C4tvUFu48-EoLGXM?purpose=fullsize"
+                        class="option">Фотография 6</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/lOYg2m8DUZgKmlv-p85UEPgzz1WB5N8kRs27PAIxul6jQUV2dgNzZiKNZyMe-hH6fBQpzmGoh9c_xpOh2Gc1WFry3LUAg0OwYGj3gO8Cq-bV6GPF8C55PzSbJiNPtCKWsDkvg5A30d96OSUl2osMs2AghWGZtvfrVo2kFT4LBzU3diKsAUnPP28iWuNBalJu?purpose=fullsize"
+                        class="option">Фотография 7</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/l7RrHo21ZsoelhYjWxNNBN582QMDG5Cg4QusPJy3gWyAFHF_YntgKCY0Iq92vfhJzDElIVynhLPEMXpY8h16UCz1QpewR8kmjRfrE6LMN_vE-HbTximDsEkdtfeKPQ1Bwozxmxto-mbjv5g7bI7_2D1hQdC423vbZhUmqSuh6WbG6hWegcGcbJHBNXWxi6N6?purpose=inline"
+                        class="option">Фотография 8</option>
+                    <option
+                        value="https://images.openai.com/static-rsc-4/msZDUoT1FgwKUwl8D0HP4wLuJUxPAzb7VkaxEy6-LgmwVHlQz9ey8qYDEpRqil_5AYLRM5GjMzwDVtQg5FQXpmDrX1Zt9d6pU6ImqDvXqSoLeso0yEkIjgUHWTdZ-Xszex7p_ZH7oHwW9rgDd48dgRbjfLzTDbyVIAB4HE9ZSrBXSsCjIoeYxcYBGtRJ6V28?purpose=inline"
+                        class="option">Фотография 9</option>
+                </select>
+            </div>
 
-                <div class="modal_container--buttons">
-                    <button class="cancel-btn" data-modal-cancel-btn type="button">Cancel</button>
-                    <button class="create-btn" type="submit">Create User</button>
-                </div>
-            </form>
-        </div>
+            <div class="modal_container--buttons">
+                <button class="cancel-btn" data-modal-cancel-btn type="button">Cancel</button>
+                <button class="create-btn" type="submit">Create User</button>
+            </div>
+        </form>
+    </div>
 
 
     <template data-user-template>

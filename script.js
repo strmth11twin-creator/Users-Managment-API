@@ -10,6 +10,8 @@ const searchInput = document.querySelector("[data-search-Input]");
 const userDialog = document.querySelector("[data-user-dialog]");
 const sidebarNavigation = document.querySelector("[data-sidebar-navigation]");
 const navigationItems = document.querySelectorAll(".sidebar_navigation--container");
+const sidebar = document.querySelector("[data-sidebar]");
+const crossBtn = document.querySelector("[data-cross-btn]");
 
 const allCount = document.querySelector("[data-all-count]");
 const activeCount = document.querySelector("[data-active-count]");
@@ -70,14 +72,14 @@ async function updateUser(user) {
             }
         })
 
-        if(!response.ok) {
+        if (!response.ok) {
             throw new Error(`Ошибка ${response.status}`);
         }
 
         const data = await response.json();
 
         users = users.map(t => {
-            if(t.id === data.id) {
+            if (t.id === data.id) {
                 return data
             }
 
@@ -136,10 +138,20 @@ async function deleteUser(user) {
     }
 }
 
+sidebar.addEventListener("click", (e) => {
+    if (e.target.classList.contains("sidebar")) {
+        sidebar.classList.add("sidebar-visible")
+    }
+})
+
+crossBtn.addEventListener("click", () => {
+    sidebar.classList.remove("sidebar-visible")
+})
+
 sidebarNavigation.addEventListener("click", (e) => {
     const navItem = e.target.closest(".sidebar_navigation--container");
 
-    if(!navItem) return;
+    if (!navItem) return;
 
     navigationItems.forEach(item => item.classList.remove("active"));
     navItem.classList.add("active");
@@ -199,13 +211,13 @@ function createdUserLayout(user) {
     const userRole = userElement.querySelector("[data-user-role]");
     userRole.textContent = user.role;
     userRole.textContent === "User" ? userRole.classList.add("role-user") :
-    userRole.textContent === "Admin" ? userRole.classList.add("role-admin") :
-    userRole.textContent === "Moderator" ? userRole.classList.add("role-moderator") : "";
+        userRole.textContent === "Admin" ? userRole.classList.add("role-admin") :
+            userRole.textContent === "Moderator" ? userRole.classList.add("role-moderator") : "";
 
     const userStatus = userElement.querySelector("[data-user-status]");
     userStatus.textContent = user.status;
     userStatus.textContent === "Active" ? userStatus.textContent = "🟢 Active" :
-    userStatus.textContent === "Inactive" ? userStatus.textContent = "🔴 Inactive" : "";
+        userStatus.textContent === "Inactive" ? userStatus.textContent = "🔴 Inactive" : "";
 
     const removeBtn = userElement.querySelector("[data-remove-btn]");
 
@@ -338,8 +350,8 @@ function populateDialog(user) {
 function renderFiltered() {
     containerUsers.innerHTML = "";
 
-    if(filterList.length === 0) {
-        return containerUsers.innerHTML = "<h3>Нет найденных задач...</h3>"
+    if (filterList.length === 0) {
+        return containerUsers.innerHTML = "<h3>Пользователи не найдены...</h3>"
     }
 
     if (current === "admins") {
@@ -360,17 +372,17 @@ function renderFiltered() {
 function render() {
     containerUsers.innerHTML = "";
 
-    if(users.length === 0) {
-        return containerUsers.innerHTML = "<h3>Нет задач...</h3>"
+    if (users.length === 0) {
+        return containerUsers.innerHTML = "<h3>Нет пользователей...</h3>"
     }
 
-     list = users;
+    list = users;
 
-    if(current === "admins") {
+    if (current === "admins") {
         list = users.filter(t => t.role === "Admin");
     }
 
-    if(current === "moderators") {
+    if (current === "moderators") {
         list = users.filter(t => t.role === "Moderator");
     }
 
